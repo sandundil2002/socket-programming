@@ -2,6 +2,7 @@ package lk.ijse;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.Socket;
 import java.util.Scanner;
 
@@ -14,17 +15,24 @@ public class Client {
             dataOutputStream.writeUTF("Hello server...!");
 
             DataInputStream dataInputStream = new DataInputStream(remoteSocket.getInputStream());
-            String s = dataInputStream.readUTF();
-            System.out.println(s);
+            String serverMessage = dataInputStream.readUTF();
+            System.out.println("Server: " + serverMessage);
 
-            while (true){
-                String message = input.nextLine();
-                dataOutputStream.writeUTF(message);
-                System.out.println(dataInputStream.readUTF());
+            while (true) {
+                String clientMessage = input.nextLine();
+                dataOutputStream.writeUTF(clientMessage);
+
+                if (clientMessage.equals("end")) {
+                    break;
+                }
+                String receivedMessage = dataInputStream.readUTF();
+                if (receivedMessage.equals("end")) {
+                    break;
+                }
+                System.out.println("Server: " + receivedMessage);
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 }
-
