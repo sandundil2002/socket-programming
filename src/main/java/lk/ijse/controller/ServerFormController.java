@@ -17,19 +17,20 @@ public class ServerFormController {
     Socket socket;
     DataInputStream dataInputStream;
     DataOutputStream dataOutputStream;
-    String message="";
+    String message = "";
 
     public void initialize() {
         new Thread(() -> {
             try {
-                serverSocket=new ServerSocket(5000);
+                serverSocket = new ServerSocket(3002);
                 txtField.appendText("Server Started");
-                socket=serverSocket.accept();
+                socket = serverSocket.accept();
                 txtField.appendText("\nClient Connected..");
-                dataInputStream=new DataInputStream(socket.getInputStream());
-                dataOutputStream=new DataOutputStream(socket.getOutputStream());
-                while (!message.equals("exit")){
-                    message=dataInputStream.readUTF();
+                dataInputStream = new DataInputStream(socket.getInputStream());
+                dataOutputStream = new DataOutputStream(socket.getOutputStream());
+
+                while (!message.equals("end")){
+                    message = dataInputStream.readUTF();
                     txtField.appendText("\nClient: "+message);
                 }
 
