@@ -43,5 +43,6 @@ public class ServerFormController {
     public void btnSendOnAction(ActionEvent actionEvent) throws IOException {
         dataOutputStream.writeUTF(txtMsg.getText().trim());
         dataOutputStream.flush();
+        txtMsg.setText("");
     }
 }

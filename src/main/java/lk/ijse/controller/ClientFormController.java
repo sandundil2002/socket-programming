@@ -7,7 +7,6 @@ import javafx.scene.control.TextField;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ClientFormController {
@@ -36,7 +35,8 @@ public class ClientFormController {
     }
 
     public void btnSendOnAction(ActionEvent actionEvent) throws IOException {
-        dataOutputStream.writeUTF(txtMsg.getText().trim());
-        dataOutputStream.flush();
+            dataOutputStream.writeUTF(txtMsg.getText().trim());
+            dataOutputStream.flush();
+            txtMsg.setText("");
     }
 }
