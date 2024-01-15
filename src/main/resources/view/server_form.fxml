@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="654.0" style="-fx-background-color: #E0DAF2;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ServerFormController">
+<AnchorPane centerShape="false" prefHeight="400.0" prefWidth="654.0" style="-fx-background-color: #E0DAF2;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ServerFormController">
    <children>
       <Label alignment="TOP_CENTER" layoutX="38.0" layoutY="17.0" prefHeight="46.0" prefWidth="92.0" style="-fx-background-color: #E0DAF2;" text="Server">
          <font>
