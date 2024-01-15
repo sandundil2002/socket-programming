@@ -2,8 +2,11 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -16,11 +19,25 @@
          </font>
       </Label>
       <JFXTextArea fx:id="txtField" editable="false" layoutX="29.0" layoutY="68.0" prefHeight="250.0" prefWidth="594.0" />
-      <TextField fx:id="txtMsg" layoutX="25.0" layoutY="344.0" prefHeight="34.0" prefWidth="526.0" promptText="Text here" />
+      <TextField fx:id="txtMsg" layoutX="25.0" layoutY="344.0" prefHeight="34.0" prefWidth="526.0" promptText="Text here">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
       <JFXButton layoutX="554.0" layoutY="338.0" onAction="#btnSendOnAction" prefHeight="33.0" prefWidth="74.0" text="Send">
          <font>
             <Font size="20.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Lighting bumpInput="$null">
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
       </JFXButton>
    </children>
 </AnchorPane>
