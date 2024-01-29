@@ -39,4 +39,4 @@ If you find ways to improve or enhance this chat application feel free to contri
 
 Technologies used in the project:
 
-*   Java
+*   Java & JavaFX
