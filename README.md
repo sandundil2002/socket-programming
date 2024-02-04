@@ -1,4 +1,4 @@
-<h1 align="center" id="title">Simple Client-Server Chat</h1>
+<h1><a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=800&size=60&pause=1000&random=false&width=1100&height=100&lines=Simple+Client-Server+Chat" alt="Typing SVG" /></a></h1>
 
 <p id="description">Welcome to the Simple Java Socket Chat App! This repository is dedicated to a straightforward client-server chat application implemented in Java using socket programming. Whether you're a beginner looking to explore the fundamentals of networking or an experienced developer seeking a simple example this project provides a clear demonstration of creating a basic chat system.</p>
 
